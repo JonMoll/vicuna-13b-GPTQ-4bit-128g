@@ -135,4 +135,4 @@ class LLMVicuna:
             for output in generator:
                 new_tokens = len(output) - len(input_ids[0])
                 reply = self.decode(output[-new_tokens:])
-                print(reply)
+                yield reply
